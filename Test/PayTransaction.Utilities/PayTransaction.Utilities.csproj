@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>PayTransaction.Utils</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Source\PayTransaction.Core\PayTransaction.Core.csproj" />
+      <ProjectReference Include="..\..\Source\PayTransaction.Transaction\PayTransaction.Transaction.csproj" />
+    </ItemGroup>
+
+</Project>
