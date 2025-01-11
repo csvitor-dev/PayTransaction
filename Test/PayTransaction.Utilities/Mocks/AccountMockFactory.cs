@@ -12,7 +12,7 @@ public static class AccountMockFactory
     public static (AddAccountTransaction, AccountExpected) CreateAccountMock()
     {
         var id = MaxId++;
-        var balance = Faker.Random.Double(100, 2_000);
+        var balance = Faker.Random.Double(max: 2_000);
         var expected = new AccountExpected(id, balance);
 
         return (new AddAccountTransaction(id, balance), expected);
