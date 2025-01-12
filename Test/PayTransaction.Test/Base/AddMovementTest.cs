@@ -4,10 +4,10 @@ using PayTransaction.Utils.Mocks;
 namespace PayTransaction.Test.Base;
 
 [TestFixture]
-public class AddMovementTransactionTest
+public class AddMovementTest
 {
     [Test]
-    public void Test_AddIncomeTransaction_OnSuccess()
+    public void Test_AddIncome_OnSuccess()
     {
         var (accountTransaction, expectedAccount) = AccountMockFactory.CreateAccountMock();
         var (incomeTransaction, expectedMovement) = MovementMockFactory
