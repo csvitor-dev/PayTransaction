@@ -1,5 +1,6 @@
 using PayTransaction.Core.Data;
 using PayTransaction.Utils.Mocks;
+using PayTransaction.Utils.Models.Account;
 
 namespace PayTransaction.Test.Base;
 
