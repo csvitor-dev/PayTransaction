@@ -4,7 +4,7 @@ using PayTransaction.Utils.Mocks;
 namespace PayTransaction.Test.Base;
 
 [TestFixture]
-public class AddAccountTransactionTest
+public class AddAccountTest
 {
     [Test]
     public void Test_OnSuccess()

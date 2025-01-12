@@ -3,7 +3,7 @@ using PayTransaction.Core.Entities;
 
 namespace PayTransaction.Application.Create;
 
-public class AddAccountTransaction
+public class AddAccount
     (int accountId, double initialBalance) : ITransaction
 {
     public void Execute()
