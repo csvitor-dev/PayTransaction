@@ -4,9 +4,8 @@ using PayTransaction.Utils.Models.Account;
 
 namespace PayTransaction.Utils.Mocks;
 
-public static class AccountMockFactory
+public abstract class AccountMockFactory : MockFactory
 {
-    private static readonly Faker Faker = new();
     private static int MaxId { get; set; } = Faker.Random.Number(1, 1_000);
 
     public static (AddAccount, AccountExpected) CreateAccountMock()
