@@ -5,7 +5,7 @@ namespace PayTransaction.Application.Movement;
 public abstract class AddMovement
     (int accountId) : ITransaction
 {
-    protected abstract Core.Entities.Movement MakeMovement();
+    protected abstract Core.Entities.Movement MakeMovement(); // FACTORY METHOD
     
     public void Execute()
     {
