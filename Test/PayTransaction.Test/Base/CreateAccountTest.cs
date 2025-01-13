@@ -1,14 +1,13 @@
 using PayTransaction.Core.Data;
 using PayTransaction.Utils.Mocks;
-using PayTransaction.Utils.Models.Account;
 
 namespace PayTransaction.Test.Base;
 
 [TestFixture]
-public class AddAccountTest
+public class CreateAccountTest
 {
     [Test]
-    public void Test_OnSuccess()
+    public void Test_AddAccount_OnSuccess()
     {
         var (result, expected) = AccountMockFactory.CreateAccountMock();
 
