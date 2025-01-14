@@ -27,4 +27,12 @@ public abstract class MovementMockFactory : MockFactory
         
         return (new AddExpense(accountId, id, amount), expected);
     }
+    
+    public static (AddTransfer, MovementExpected) CreateTransferMock(int accountId)
+    {
+        var (id, amount) = GetBaseData();
+        var expected = new MovementExpected(id, amount);
+        
+        return (new AddTransfer(accountId, id, amount), expected);
+    }
 }
