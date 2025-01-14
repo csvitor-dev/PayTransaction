@@ -51,10 +51,13 @@ public class AddMovementTest
     public void Test_AddTransfer_OnSuccess()
     {
         var (accountTransaction, expectedAccount) = AccountMockFactory.CreateAccountMock();
+        var (walletTransaction, _) = WalletMockFactory
+            .CreateWalletMock(expectedAccount.Id);
         var (transferTransaction, expectedMovement) = MovementMockFactory
             .CreateTransferMock(expectedAccount.Id);
         
         accountTransaction.Execute();
+        walletTransaction.Execute();
         transferTransaction.Execute();
         var account = PayDb.GetAccount(expectedAccount.Id);
         var wallet = PayDb.GetWallet(expectedAccount.Id);
@@ -66,6 +69,7 @@ public class AddMovementTest
         Assert.That(wallet?.Balance, Is.EqualTo(expectedMovement.Amount));
         Assert.That(accountMovement is Transfer, Is.True);
         Assert.That(walletMovement, Is.Not.Null);
+        Assert.That(accountMovement, Is.EqualTo(walletMovement));
         Assert.That(accountMovement?.Id, Is.EqualTo(expectedMovement.Id));
         Assert.That(accountMovement?.Amount, Is.EqualTo(expectedMovement.Amount));
         Assert.That(account.Balance,
