@@ -34,7 +34,7 @@ public class CreateAccountTest
 
         Assert.That(wallet, Is.Not.Null);
         Assert.That(wallet.Movements, Is.Empty);
-        Assert.That(wallet.AccountId, Is.EqualTo(expectedAccount.Id));
-        Assert.That(account.Wallet, Is.EqualTo(expectedWallet.Balance));
+        Assert.That(wallet.AccountId, Is.EqualTo(expectedWallet.AccountId));
+        Assert.That(account?.Wallet, Is.EqualTo(expectedWallet.Balance));
     }
 }
