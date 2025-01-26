@@ -1,4 +1,3 @@
-using Bogus;
 using PayTransaction.Application.Create;
 using PayTransaction.Utils.Models.Account;
 
