@@ -8,9 +8,7 @@ public class Transfer
 {
     public override void Transact(Account account)
     {
-        var wallet = PayDb.GetWallet(account.Id);
-        
-        if (wallet is null)
+        var wallet = PayDb.GetWallet(account.Id) ?? 
             throw new InvalidOperationException("Investment wallet does not exist");
         account.Withdraw(Amount);
         wallet.Deposit(Amount);
