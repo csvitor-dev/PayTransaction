@@ -1,0 +1,30 @@
+{
+  "name": "pay-transaction",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/csvitor-dev/PayTransaction#readme",
+  "bugs": {
+    "url": "https://github.com/csvitor-dev/PayTransaction/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csvitor-dev/PayTransaction.git"
+  },
+  "license": "ISC",
+  "author": "csvitor-dev <csvitor.dev@gmail.com>",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "node dist/index.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2"
+  }
+}

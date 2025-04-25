@@ -2,7 +2,7 @@ using PayTransaction.Core.Contracts;
 
 namespace PayTransaction.Application.Services.Payment;
 
-public class PaypalServiceAdapter // ADAPTER
+public class PaypalServiceAdapter
     (PaypalService service) : IPaymentService
 {
     public void ProcessPayment(Core.Entities.Payment payment)
